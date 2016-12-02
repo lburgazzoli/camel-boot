@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: CamelBoot
+    description: CamelBoot Microservice
+  output:
+    ansi:
+      enabled: ALWAYS
+  cloud:
+    kubernetes:
+      enabled: false
+logging:
+  level: DEBUG
