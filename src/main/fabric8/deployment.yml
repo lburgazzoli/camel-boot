@@ -1,0 +1,11 @@
+spec:
+  replicas: 1
+  template:
+    spec:
+      containers:
+        - 
+          env:
+          - name: SPRING_APPLICATION_NAME
+            value: camel-springboot-microservce
+          - name: SPRING_CLOUD_KUBERNETES_ENABLED
+            value: true

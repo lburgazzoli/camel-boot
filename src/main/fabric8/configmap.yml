@@ -1,0 +1,11 @@
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: camel-springboot-microservice
+data:
+  application.yaml: |-
+    com:
+      github:
+        lburgazzoli:
+          health:
+            maxVisits: 20
