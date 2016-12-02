@@ -14,14 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.github.lburgazzoli.camel.springboot.microservice;
+package com.github.lburgazzoli.camel.boot;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import java.util.concurrent.atomic.AtomicLong;
 
-@SpringBootApplication
-public class Application {
-    public static void main(String[] args) {
-        SpringApplication.run(Application.class, args);
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class Controller {
+    private final AtomicLong counter = new AtomicLong();
+
+    @RequestMapping("/visit")
+    public String visit() {
+        return "Hello visitors n. " + counter.incrementAndGet();
+    }
+
+    public long getVisits() {
+        return this.counter.get();
     }
 }

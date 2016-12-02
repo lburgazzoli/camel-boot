@@ -14,24 +14,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.github.lburgazzoli.camel.springboot.microservice;
+package com.github.lburgazzoli.camel.boot;
 
-import java.util.concurrent.atomic.AtomicLong;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.stereotype.Component;
 
-@RestController
-public class Controller {
-    private final AtomicLong counter = new AtomicLong();
+@Component
+@ConfigurationProperties("com.github.lburgazzoli.health")
+public class ApplicationHealthIndicatorConfiguration {
+    private Integer maxVisits = 10;
 
-    @RequestMapping("/visit")
-    public String visit() {
-        return "Hello visitors n. " + counter.incrementAndGet();
+    public void setMaxVisits(Integer value) {
+        this.maxVisits = value;
     }
 
-    public long getVisits() {
-        return this.counter.get();
+    public Integer getMaxVisits() {
+        return this.maxVisits;
     }
 }

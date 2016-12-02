@@ -14,9 +14,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.github.lburgazzoli.camel.springboot.microservice;
+package com.github.lburgazzoli.camel.boot;
 
-import java.util.concurrent.atomic.AtomicLong;
 import org.springframework.boot.actuate.health.Health;
 import org.springframework.boot.actuate.health.AbstractHealthIndicator;
 import org.springframework.stereotype.Component;

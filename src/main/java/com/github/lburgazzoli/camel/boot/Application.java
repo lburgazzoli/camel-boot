@@ -14,21 +14,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.github.lburgazzoli.camel.springboot.microservice;
+package com.github.lburgazzoli.camel.boot;
 
-import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.stereotype.Component;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@Component
-@ConfigurationProperties("com.github.lburgazzoli.health")
-public class ApplicationHealthIndicatorConfiguration {
-    private Integer maxVisits = 10;
-
-    public void setMaxVisits(Integer value) {
-        this.maxVisits = value;
-    }
-
-    public Integer getMaxVisits() {
-        return this.maxVisits;
+@SpringBootApplication
+public class Application {
+    public static void main(String[] args) {
+        SpringApplication.run(Application.class, args);
     }
 }

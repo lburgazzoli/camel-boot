@@ -6,9 +6,9 @@
 
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.github.lburgazzoli</groupId>
-  <artifactId>camel-springboot-microservice</artifactId>
+  <artifactId>camel-boot</artifactId>
   <version>1.0.0-SNAPSHOT</version>
-  <name>camel-springboot-microservice</name>
+  <name>camel-boot</name>
   <packaging>jar</packaging>
 
   <prerequisites>

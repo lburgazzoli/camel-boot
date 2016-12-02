@@ -6,6 +6,8 @@ spec:
         - 
           env:
           - name: SPRING_APPLICATION_NAME
-            value: camel-springboot-microservce
+            value: camel-boot
           - name: SPRING_CLOUD_KUBERNETES_ENABLED
+            value: true
+          - name: SPRING_CLOUD_KUBERNETES_RELOAD_ENABLED
             value: true
