@@ -43,6 +43,9 @@
 
     <!-- java -->
     <version.java>1.8</version.java>
+
+    <!-- fabric8 -->
+    <fabric8.deploy.createExternalUrls>true</fabric8.deploy.createExternalUrls>
   </properties>
 
   <dependencies>

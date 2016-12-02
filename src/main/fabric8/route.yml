@@ -1,8 +1,0 @@
-apiVersion: v1
-kind: Route
-metadata:
-  name: camel-boot
-spec:
-  to:
-    kind: Service
-    name: camel-boot
